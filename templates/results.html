@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothole Detection Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://thenewswheel.com/wp-content/uploads/2018/06/2018_FORD_FOCUS_POTHOLE_16-760x507.jpg'); /* Update the path to your background image */
+            background-position: center;
+                background-repeat: no-repeat;
+                background-size:cover;
+                height: 88vh;
+            color: #fff; 
+            text-align: center; /* Center text within the body */
+        }
+
+        header {
+            background-color: #121212;
+            padding: 0.2em;
+        }
+
+        h1 {
+            color: #fff; /* Change heading and link color to white */
+            margin-bottom: 1em;
+        }
+
+        p {
+            color: #000; /* Change prediction result color to black */
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: #000; /* Change heading and link color to black */
+            text-decoration: none;
+            border-bottom: 1px solid #fff; /* Change link border color to white */
+            margin-bottom: 1em;
+        }
+
+        a:hover {
+            color: #ccc; /* Change link hover color to a lighter shade */
+            border-bottom: 1px solid #ccc; /* Change link hover border color to a lighter shade */
+        }
+        input{
+            width: 180px; 
+    height: 30px; 
+   
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Detection Result</h1>
+    </header>
+<div style="text-align: center;"></div>
+    <p><h1 style="color:rgb(253, 117, 5);">Prediction: {{ prediction }}</h1></p>
+    <a href="{{ url_for('pothole_page') }}"><input type="submit" value="Upload Another Image"></a>
+
+</body>
+</html>
